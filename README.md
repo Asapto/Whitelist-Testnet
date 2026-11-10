@@ -3,6 +3,14 @@
 Refonte complète, en HTML / CSS / JavaScript statiques (aucune dépendance, aucun build), du site
 des restaurants pizzerias **O'Cadre** (Forbach, Freyming-Merlebach / Betting, Saint-Avold).
 
+## Direction artistique
+
+Minimalisme inspiré des pages produit Apple, avec le rouge O'Cadre en signature : une idée par
+écran, titres géants serrés (Inter), alternance noir / blanc / rouge plein, tuiles plates aux
+grands arrondis, navigation fine et translucide, texte court. La page d'accueil se lit comme une
+keynote : le produit, la pizza carrée (+27 % de surface), le fait maison, la commande en trois
+minutes, la carte, les restaurants, la note 4,8 / 5.
+
 ## Pages
 
 | Fichier                 | Contenu                                                                                   |
@@ -18,7 +26,7 @@ des restaurants pizzerias **O'Cadre** (Forbach, Freyming-Merlebach / Betting, Sa
 
 ```
 assets/
-  css/style.css   # design system (noir / rouge / crème, Raleway + Playfair Display), responsive
+  css/style.css   # design system « keynote » : noir / blanc / rouge signature, Inter, tuiles plates, responsive
   js/main.js      # menu mobile, apparition au défilement, statut ouvert/fermé, formulaires, bandeau cookies
   js/order.js     # moteur de commande (carte, options, panier, créneaux, confirmation)
   data/menu.json  # carte, prix, options, secteurs, horaires, frais de livraison, réglages de commande
