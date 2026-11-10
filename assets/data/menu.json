@@ -1,0 +1,188 @@
+{
+  "_commentaire": "Carte et tarifs INDICATIFS à valider par O'Cadre avant mise en ligne. Tant que 'tarifs_valides' est false, une mention 'tarifs indicatifs' est affichée sur la page de commande. Les prix sont en euros TTC.",
+  "tarifs_valides": false,
+  "devise": "€",
+  "commande": {
+    "endpoint": "",
+    "sms_commande": true,
+    "delai_preparation_min": 30,
+    "pas_creneau_min": 15,
+    "jours_a_l_avance": 2
+  },
+  "secteurs": [
+    {
+      "id": "forbach",
+      "nom": "Forbach",
+      "restaurant": "O'Cadre Forbach",
+      "adresse": "40 rue Nationale, 57600 Forbach",
+      "telephone": "03 87 87 54 32",
+      "tel_lien": "+33387875432",
+      "espace_client": "https://ocadre.com/pizzeria-forbach-ocadre/",
+      "modes": ["livraison", "emporter"],
+      "codes_postaux": ["57600", "57350", "57460", "57490", "57520", "57540", "57880", "57200"],
+      "communes": ["Forbach", "Stiring-Wendel", "Behren-lès-Forbach", "Petite-Rosselle", "Schœneck", "Spicheren", "Œting", "Morsbach", "Folkling", "Rosbruck", "Cocheren"],
+      "livraison": { "frais": 2.5, "minimum": 15, "gratuite_des": 30 },
+      "horaires": {
+        "midi": ["11:30", "14:00"],
+        "soir": ["17:30", "22:00"],
+        "ferme_midi": [0]
+      }
+    },
+    {
+      "id": "merlebach",
+      "nom": "Freyming-Merlebach",
+      "restaurant": "O'Cadre Betting",
+      "adresse": "34 rue Nationale, 57800 Betting",
+      "telephone": "03 87 00 66 62",
+      "tel_lien": "+33387006662",
+      "espace_client": "https://ocadre.com/pizzeria-merlebach-ocadre/",
+      "modes": ["livraison", "emporter"],
+      "codes_postaux": ["57800", "57450", "57150", "57660", "57740"],
+      "communes": ["Freyming-Merlebach", "Betting", "Hombourg-Haut", "Farébersviller", "Henriville", "Seingbouse", "Cappel", "Barst", "Guenviller", "Hoste"],
+      "livraison": { "frais": 2.5, "minimum": 15, "gratuite_des": 30 },
+      "horaires": {
+        "midi": ["11:30", "14:00"],
+        "soir": ["17:30", "22:00"],
+        "ferme_midi": [0, 6]
+      }
+    },
+    {
+      "id": "saint-avold",
+      "nom": "Saint-Avold",
+      "restaurant": "O'Cadre Saint-Avold",
+      "adresse": "Secteur Saint-Avold",
+      "telephone": "03 87 00 66 62",
+      "tel_lien": "+33387006662",
+      "espace_client": "https://ocadre.com/pizzeria-saint-avold-ocadre/",
+      "modes": ["livraison", "emporter"],
+      "codes_postaux": ["57500", "57730", "57740", "57890", "57380"],
+      "communes": ["Saint-Avold", "Macheren", "Lachambre", "Carling", "L'Hôpital", "Longeville-lès-Saint-Avold", "Valmont", "Folschviller", "Porcelette"],
+      "livraison": { "frais": 2.5, "minimum": 15, "gratuite_des": 30 },
+      "horaires": {
+        "midi": ["11:30", "14:00"],
+        "soir": ["17:30", "22:00"],
+        "ferme_midi": [0, 6]
+      }
+    }
+  ],
+  "options": {
+    "pate": { "label": "Pâte", "choix": ["Fine", "Épaisse"], "defaut": "Fine" },
+    "sauce": { "label": "Sauce", "choix": ["Tomate", "Crème", "Bolognaise", "Carbonara", "Pesto", "Arrabbiata", "4 fromages"], "defaut": "Tomate" },
+    "fromage": { "label": "Fromage", "choix": ["Mozzarella", "Parmesan", "Chèvre", "Gorgonzola", "Sans fromage"], "defaut": "Mozzarella" },
+    "pates": { "label": "Pâtes", "choix": ["Penne", "Fusilli", "Tagliatelles", "Spaghetti"], "defaut": "Penne" }
+  },
+  "categories": [
+    {
+      "id": "pizzas",
+      "nom": "Pizzas",
+      "sous_titre": "Carrées, pâte fine ou épaisse",
+      "image": "assets/img/cat-pizza.jpg",
+      "options": ["pate"],
+      "items": [
+        { "id": "margherita", "nom": "Margherita", "desc": "Tomate, mozzarella, origan", "prix": 8.5, "veg": true },
+        { "id": "reine", "nom": "Reine", "desc": "Tomate, mozzarella, jambon, champignons", "prix": 10.5, "populaire": true },
+        { "id": "4-saisons", "nom": "Quatre saisons", "desc": "Tomate, mozzarella, jambon, champignons, artichauts, olives", "prix": 11.5 },
+        { "id": "4-fromages", "nom": "Quatre fromages", "desc": "Tomate, mozzarella, chèvre, gorgonzola, parmesan", "prix": 11.5, "veg": true },
+        { "id": "dynamite", "nom": "Dynamite", "desc": "Tomate, mozzarella, merguez, poivrons, oignons, piment", "prix": 12, "populaire": true, "epice": true },
+        { "id": "orientale", "nom": "Orientale", "desc": "Tomate, mozzarella, merguez, poivrons, œuf", "prix": 11.5 },
+        { "id": "chevre-miel", "nom": "Chèvre miel", "desc": "Crème, mozzarella, chèvre, miel, noix", "prix": 12, "veg": true },
+        { "id": "savoyarde", "nom": "Savoyarde", "desc": "Crème, mozzarella, lardons, pommes de terre, reblochon, oignons", "prix": 12.5 },
+        { "id": "saumon", "nom": "Saumon", "desc": "Crème, mozzarella, saumon fumé, aneth, citron", "prix": 13 },
+        { "id": "poulet-curry", "nom": "Poulet curry", "desc": "Crème, mozzarella, poulet, curry, poivrons", "prix": 12 },
+        { "id": "bolognaise", "nom": "Bolognaise", "desc": "Tomate, mozzarella, viande hachée, oignons", "prix": 11.5 },
+        { "id": "calzone", "nom": "Calzone", "desc": "Tomate, mozzarella, jambon, champignons, œuf (fermée)", "prix": 11.5 },
+        { "id": "vegetarienne", "nom": "Végétarienne", "desc": "Tomate, mozzarella, poivrons, champignons, oignons, olives, artichauts", "prix": 11.5, "veg": true },
+        { "id": "ocadre", "nom": "O'Cadre", "desc": "La spéciale maison : tomate, mozzarella, jambon, chorizo, champignons, olives, œuf", "prix": 13.5, "populaire": true },
+        { "id": "kebab", "nom": "Kebab", "desc": "Tomate, mozzarella, viande kebab, oignons, sauce blanche", "prix": 12.5 },
+        { "id": "tartiflette", "nom": "Tartiflette", "desc": "Crème, mozzarella, pommes de terre, lardons, oignons, reblochon", "prix": 12.5 }
+      ]
+    },
+    {
+      "id": "flamms",
+      "nom": "Flamms",
+      "sous_titre": "Pâte fine, crème et oignons",
+      "image": "assets/img/cat-salade.jpg",
+      "items": [
+        { "id": "flamm-tradition", "nom": "Flamm tradition", "desc": "Crème, oignons, lardons", "prix": 9, "populaire": true },
+        { "id": "flamm-gratinee", "nom": "Flamm gratinée", "desc": "Crème, oignons, lardons, gruyère", "prix": 10 },
+        { "id": "flamm-poulet", "nom": "Flamm au poulet", "desc": "Crème, oignons, poulet, poivrons", "prix": 10.5 },
+        { "id": "flamm-saumon", "nom": "Flamm au saumon", "desc": "Crème, oignons, saumon fumé, aneth", "prix": 11.5 }
+      ]
+    },
+    {
+      "id": "pates",
+      "nom": "Pâtes fraîches",
+      "sous_titre": "Choisissez vos pâtes, la sauce et le fromage",
+      "image": "assets/img/cat-pate.jpg",
+      "options": ["pates", "sauce", "fromage"],
+      "items": [
+        { "id": "pates-composer", "nom": "Pâtes fraîches à composer", "desc": "Pâtes fraîches maison, sauce et fromage au choix", "prix": 10, "populaire": true },
+        { "id": "fusilli-saumon", "nom": "Fusilli saumon & câpres", "desc": "Fusilli, crème, saumon, câpres, aneth", "prix": 12.5 },
+        { "id": "penne-aubergines", "nom": "Penne aux aubergines", "desc": "Penne, tomate, aubergines grillées, roquette, parmesan", "prix": 11.5, "veg": true },
+        { "id": "tagliatelles-carbonara", "nom": "Tagliatelles carbonara", "desc": "Tagliatelles, crème, lardons, parmesan, jaune d'œuf", "prix": 11.5 },
+        { "id": "spaghetti-bolognaise", "nom": "Spaghetti bolognaise", "desc": "Spaghetti, sauce bolognaise maison, parmesan", "prix": 11 }
+      ]
+    },
+    {
+      "id": "raviolis",
+      "nom": "Raviolis maison",
+      "sous_titre": "Farce au choix, sauce et fromage au choix",
+      "image": "assets/img/cat-ravioli.jpg",
+      "options": ["sauce", "fromage"],
+      "items": [
+        { "id": "raviolis-lardons", "nom": "Raviolis aux lardons", "desc": "Raviolis maison farcis aux lardons", "prix": 11.5 },
+        { "id": "raviolis-saumon", "nom": "Raviolis au saumon", "desc": "Raviolis maison farcis au saumon", "prix": 12.5, "populaire": true },
+        { "id": "raviolis-champignons", "nom": "Raviolis aux champignons", "desc": "Raviolis maison farcis aux champignons", "prix": 11.5, "veg": true }
+      ]
+    },
+    {
+      "id": "specialites",
+      "nom": "Spécialités",
+      "sous_titre": "À l'italienne, faites maison",
+      "image": "assets/img/cat-specialite.jpg",
+      "items": [
+        { "id": "arancinis", "nom": "Arancinis (x3)", "desc": "Boulettes de risotto panées, sauce tomate, salade", "prix": 8.5 },
+        { "id": "lasagnes", "nom": "Lasagnes maison", "desc": "Lasagnes à la bolognaise, gratinées", "prix": 11.5, "populaire": true },
+        { "id": "escalope-milanaise", "nom": "Escalope milanaise", "desc": "Escalope panée, pâtes fraîches sauce tomate", "prix": 13.5 }
+      ]
+    },
+    {
+      "id": "salades",
+      "nom": "Salades",
+      "sous_titre": "Produits frais",
+      "image": "assets/img/cat-salade.jpg",
+      "items": [
+        { "id": "salade-vosgienne", "nom": "Vosgienne", "desc": "Salade, lardons, pommes de terre, œuf, croûtons, crème", "prix": 10.5 },
+        { "id": "salade-oceane", "nom": "Océane", "desc": "Salade, saumon, crevettes, tomates, citron", "prix": 12 },
+        { "id": "salade-nicoise", "nom": "Niçoise", "desc": "Salade, thon, œuf, tomates, olives, haricots verts, anchois", "prix": 10.5 },
+        { "id": "salade-poulet", "nom": "Poulet", "desc": "Salade, poulet grillé, tomates, croûtons, parmesan", "prix": 11 },
+        { "id": "salade-saumon", "nom": "Saumon", "desc": "Salade, saumon fumé, tomates, œuf, citron", "prix": 12 }
+      ]
+    },
+    {
+      "id": "desserts",
+      "nom": "Desserts",
+      "sous_titre": "La note sucrée",
+      "image": "assets/img/cat-dessert.jpg",
+      "items": [
+        { "id": "pizza-nutella-banane", "nom": "Pizza Nutella Banane", "desc": "Pâte fine, Nutella, bananes", "prix": 8, "populaire": true },
+        { "id": "pizza-sucree", "nom": "Pizza sucrée", "desc": "Pâte fine, Nutella, sucre glace", "prix": 7 },
+        { "id": "tiramisu-nutella", "nom": "Tiramisu Nutella", "desc": "Tiramisu maison au Nutella", "prix": 4.5 },
+        { "id": "ben-jerrys", "nom": "Glace Ben & Jerry's", "desc": "Pot 100 ml, parfum au choix", "prix": 3.5 }
+      ]
+    },
+    {
+      "id": "boissons",
+      "nom": "Boissons",
+      "sous_titre": "Pour accompagner",
+      "image": "assets/img/desserts.jpg",
+      "items": [
+        { "id": "soda-33", "nom": "Soda 33 cl", "desc": "Coca-Cola, Coca Zero, Fanta, Sprite, Ice Tea", "prix": 2 },
+        { "id": "soda-150", "nom": "Soda 1,5 L", "desc": "Coca-Cola, Coca Zero, Fanta, Ice Tea", "prix": 3.5 },
+        { "id": "eau-50", "nom": "Eau 50 cl", "desc": "Plate ou gazeuse", "prix": 1.5 },
+        { "id": "biere-33", "nom": "Bière 33 cl", "desc": "Blonde", "prix": 3 }
+      ]
+    }
+  ],
+  "suggestions": ["pizza-nutella-banane", "tiramisu-nutella", "soda-150", "arancinis"]
+}
